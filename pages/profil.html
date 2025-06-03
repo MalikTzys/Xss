@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .sidebar-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .progress-bar {
+            transition: width 0.8s ease-in-out;
+        }
+        
+        .card-shadow {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        
+        .hover-card {
+            transition: all 0.3s ease;
+        }
+        
+        .hover-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px -5px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Sidebar -->
+    <div class="fixed left-0 top-0 h-full w-20 sidebar-gradient flex flex-col items-center py-6 space-y-6 shadow-lg">
+        <div class="w-12 h-12 rounded-xl bg-white bg-opacity-20 flex items-center justify-center text-white hover:bg-opacity-30 transition-all cursor-pointer">
+            <i class="fas fa-home text-lg"></i>
+        </div>
+        <div class="w-12 h-12 rounded-xl bg-white bg-opacity-90 flex items-center justify-center text-purple-600 shadow-md">
+            <i class="fas fa-user text-lg"></i>
+        </div>
+        <div class="w-12 h-12 rounded-xl bg-white bg-opacity-20 flex items-center justify-center text-white hover:bg-opacity-30 transition-all cursor-pointer">
+            <i class="fas fa-graduation-cap text-lg"></i>
+        </div>
+        <div class="w-12 h-12 rounded-xl bg-white bg-opacity-20 flex items-center justify-center text-white hover:bg-opacity-30 transition-all cursor-pointer">
+            <i class="fas fa-chart-bar text-lg"></i>
+        </div>
+        <div class="w-12 h-12 rounded-xl bg-white bg-opacity-20 flex items-center justify-center text-white hover:bg-opacity-30 transition-all cursor-pointer">
+            <i class="fas fa-calendar text-lg"></i>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="ml-20 p-6">
+        <!-- Header -->
+        <div class="flex justify-between items-center mb-6">
+            <h1 class="text-2xl font-bold text-gray-800">Profile</h1>
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 cursor-pointer hover:bg-gray-200 transition-all">
+                    <i class="fas fa-bell"></i>
+                </div>
+                <div class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 cursor-pointer hover:bg-gray-200 transition-all">
+                    <i class="fas fa-cog"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <!-- Main Profile Card -->
+            <div class="lg:col-span-2 bg-white rounded-2xl p-6 card-shadow hover-card">
+                <div class="flex items-start space-x-6 mb-6">
+                    <div class="relative">
+                        <div class="w-24 h-24 rounded-full overflow-hidden border-4 border-purple-200">
+                            <img src="https://preview.redd.it/13-weeks-out-198-8lb-59-v0-d88uuub3c44f1.jpg?width=1080&crop=smart&auto=webp&s=4f0126f081f418768630b9cb8d058142602ee5b5" 
+                                 alt="Student" class="w-full h-full object-cover">
+                        </div>
+                        <div class="absolute -bottom-1 -right-1 w-6 h-6 bg-green-500 rounded-full border-2 border-white"></div>
+                    </div>
+                    <div class="flex-1">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-1">Ahmad Rizki Pratama</h2>
+                        <p class="text-purple-600 font-medium mb-3">Kelas XII - IPA 1</p>
+                        <p class="text-gray-600 text-sm mb-4">NIS: 20240001 | NISN: 1234567890</p>
+                        <div class="flex space-x-6 mb-4">
+                            <div class="text-center">
+                                <div class="text-xl font-bold text-gray-800">87.5</div>
+                                <div class="text-gray-600 text-sm">Rata-rata</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-xl font-bold text-gray-800">5</div>
+                                <div class="text-gray-600 text-sm">Ranking</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-xl font-bold text-gray-800">96%</div>
+                                <div class="text-gray-600 text-sm">Kehadiran</div>
+                            </div>
+                        </div>
+                        <div class="flex space-x-3">
+                            <button class="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-all text-sm">
+                                <i class="fas fa-eye mr-2"></i>Detail Nilai
+                            </button>
+                            <button class="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-all text-sm">
+                                <i class="fas fa-print mr-2"></i>Cetak Rapor
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Subject Scores -->
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-4">Nilai Mata Pelajaran</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-700 font-medium">Matematika</span>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-32 bg-gray-200 rounded-full h-2">
+                                    <div class="progress-bar bg-gradient-to-r from-blue-500 to-blue-600 h-2 rounded-full" style="width: 90%"></div>
+                                </div>
+                                <span class="text-gray-800 font-semibold text-sm w-8">90</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-700 font-medium">Bahasa Indonesia</span>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-32 bg-gray-200 rounded-full h-2">
+                                    <div class="progress-bar bg-gradient-to-r from-green-500 to-green-600 h-2 rounded-full" style="width: 88%"></div>
+                                </div>
+                                <span class="text-gray-800 font-semibold text-sm w-8">88</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-700 font-medium">Bahasa Inggris</span>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-32 bg-gray-200 rounded-full h-2">
+                                    <div class="progress-bar bg-gradient-to-r from-purple-500 to-purple-600 h-2 rounded-full" style="width: 85%"></div>
+                                </div>
+                                <span class="text-gray-800 font-semibold text-sm w-8">85</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-700 font-medium">Fisika</span>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-32 bg-gray-200 rounded-full h-2">
+                                    <div class="progress-bar bg-gradient-to-r from-red-500 to-red-600 h-2 rounded-full" style="width: 92%"></div>
+                                </div>
+                                <span class="text-gray-800 font-semibold text-sm w-8">92</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-700 font-medium">Kimia</span>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-32 bg-gray-200 rounded-full h-2">
+                                    <div class="progress-bar bg-gradient-to-r from-yellow-500 to-yellow-600 h-2 rounded-full" style="width: 86%"></div>
+                                </div>
+                                <span class="text-gray-800 font-semibold text-sm w-8">86</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-700 font-medium">Biologi</span>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-32 bg-gray-200 rounded-full h-2">
+                                    <div class="progress-bar bg-gradient-to-r from-teal-500 to-teal-600 h-2 rounded-full" style="width: 84%"></div>
+                                </div>
+                                <span class="text-gray-800 font-semibold text-sm w-8">84</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Sidebar -->
+            <div class="space-y-4">
+                <!-- Student Info -->
+                <div class="bg-white rounded-2xl p-5 card-shadow hover-card">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-4">Informasi Siswa</h3>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Tempat, Tanggal Lahir</span>
+                            <span class="text-gray-800 font-medium">Jakarta, 15 Maret 2006</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Jenis Kelamin</span>
+                            <span class="text-gray-800 font-medium">Laki-laki</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Agama</span>
+                            <span class="text-gray-800 font-medium">Islam</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Alamat</span>
+                            <span class="text-gray-800 font-medium text-right">Jl. Merdeka No. 123<br>Jakarta Pusat</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">No. Telepon</span>
+                            <span class="text-gray-800 font-medium">0812-3456-7890</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Achievements -->
+                <div class="bg-white rounded-2xl p-5 card-shadow hover-card">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-4">Prestasi</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-8 h-8 rounded-full bg-yellow-100 flex items-center justify-center">
+                                <i class="fas fa-trophy text-yellow-600 text-sm"></i>
+                            </div>
+                            <div class="flex-1">
+                                <div class="text-gray-800 font-medium text-sm">Juara 1 Olimpiade Matematika</div>
+                                <div class="text-gray-500 text-xs">Tingkat Provinsi 2024</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center">
+                                <i class="fas fa-medal text-blue-600 text-sm"></i>
+                            </div>
+                            <div class="flex-1">
+                                <div class="text-gray-800 font-medium text-sm">Juara 2 Lomba Fisika</div>
+                                <div class="text-gray-500 text-xs">Tingkat Kota 2024</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center">
+                                <i class="fas fa-certificate text-green-600 text-sm"></i>
+                            </div>
+                            <div class="flex-1">
+                                <div class="text-gray-800 font-medium text-sm">Siswa Teladan</div>
+                                <div class="text-gray-500 text-xs">Semester Ganjil 2024</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Attendance & Behavior -->
+                <div class="bg-white rounded-2xl p-5 card-shadow hover-card">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-4">Kehadiran & Perilaku</h3>
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600 text-sm">Hadir</span>
+                            <span class="text-green-600 font-semibold">192 hari</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600 text-sm">Sakit</span>
+                            <span class="text-yellow-600 font-semibold">3 hari</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600 text-sm">Izin</span>
+                            <span class="text-blue-600 font-semibold">5 hari</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600 text-sm">Alpha</span>
+                            <span class="text-red-600 font-semibold">0 hari</span>
+                        </div>
+                        <hr class="my-3">
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600 text-sm">Sikap</span>
+                            <span class="text-green-600 font-semibold">Sangat Baik</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Animate progress bars on load
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                const progressBars = document.querySelectorAll('.progress-bar');
+                progressBars.forEach(bar => {
+                    const width = bar.style.width;
+                    bar.style.width = '0%';
+                    setTimeout(() => {
+                        bar.style.width = width;
+                    }, 100);
+                });
+            }, 300);
+        });
+    </script>
+</body>
+</html>

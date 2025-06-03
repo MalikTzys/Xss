@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="../src/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="konten">    
+        <div class="login">    
+            <h1>Register</h1>
+            <div class="textbwhlogin">
+                <p>Welcome user,</p>
+                <p>Please register to make your account</p>
+            </div>
+            <form>
+                <div class="log_in">
+                    <input type="text" placeholder="Register" required>
+                </div>
+                <div class="log_in">
+                    <input type="password" placeholder="Password" required>
+                </div>
+                <div class="bwhpassword">
+                    <p>Already have an account? <a href="#" class="forgot-password" id="login">Login</a></p>
+                </div>
+                <div class="loginsingup">   
+                    <button type="submit" class="login-tbl">Register</button>
+                </div>
+            </form>
+            <div class="logo">
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fas fa-share-alt"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("login").addEventListener("click", function() {
+            window.location.href = "login.html";
+        });
+    </script>
+</body>
+</html>
